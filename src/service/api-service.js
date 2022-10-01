@@ -3,7 +3,7 @@ const API_KEY = '529fa64a859aadf1be4cc35dbd383306';
 
 async function getWeatherData(query) {
     const res = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${query}&appid=${API_KEY}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${query}&appid=${API_KEY}`
     );
 
     if (res.data.length === 0) {
@@ -23,7 +23,7 @@ async function getWeatherData(query) {
     }
 
     const data5Days = await axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
     );
 
     return { currentWeather: weatherData.data, data5Days: data5Days.data };
