@@ -1,6 +1,6 @@
 # React Weather App
 
-**The app shows current weather of the searched location and the prediction for next 5 days,
+**The app shows current weather of the searched location and the prediction for next 5 days.**
 
 ## Used Stack:
 1. React (Hooks)
